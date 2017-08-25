@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestServiceImpl.java&apos; to &apos;dubbo-service/src/main/java/com.lcd.service&apos;&#x0D;&#x0A;- Original project: &apos;dubbo_service&apos;&#x0D;&#x0A;- Destination element: &apos;dubbo-service/src/main/java/com.lcd.service&apos;&#x0D;&#x0A;- Original element: &apos;com.dubbo.demo.service.impl.TestServiceImpl.java&apos;" description="Copy compilation unit" destination="=dubbo-service/src\/main\/java&lt;com.lcd.service" element1="/src\/main\/java&lt;com.dubbo.demo.service.impl{TestServiceImpl.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1500012719541" units="1" version="1.0"/>
+</session>

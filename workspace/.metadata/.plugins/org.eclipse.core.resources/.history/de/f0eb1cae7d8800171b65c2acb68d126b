@@ -1,0 +1,19 @@
+package com.lcd.service;
+
+import java.util.Map;
+
+import com.lcd.api.GlobalService;
+
+
+public class GlobalServiceImpl implements GlobalService{
+
+	
+
+	@Override
+	public String doPost(Map<String, String> map) {
+		//统一入口调用provider进行分发接口
+		
+		return "nimei";
+	}
+
+}

@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Fri Jun 09 12:14:16 CST 2017
+org.eclipse.jst.jee.server\:dubbo_customer=F\:\\github\\dubboZookeeper\\tomcat7.0.53_customer\\webapps\\dubbo_customer
+org.eclipse.jst.j2ee.server\:dubbo_api=F\:\\github\\dubboZookeeper\\tomcat7.0.53_customer\\webapps\\dubbo_customer\\WEB-INF\\lib\\dubbo_api-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:F\:\\github\\repository\\org\\springframework\\spring-web\\4.2.5.RELEASE\\spring-web-4.2.5.RELEASE.jar=F\:\\github\\dubboZookeeper\\tomcat7.0.53_customer\\webapps\\dubbo_customer\\WEB-INF\\lib\\spring-web-4.2.5.RELEASE.jar

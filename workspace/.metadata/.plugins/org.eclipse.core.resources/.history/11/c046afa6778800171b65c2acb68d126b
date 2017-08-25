@@ -1,0 +1,18 @@
+package com.lcd.service;
+
+import java.util.Map;
+
+import com.lcd.api.GlobalService;
+
+
+public class TestServiceImpl implements GlobalService{
+
+	
+
+	@Override
+	public String doPost(Map<String, String> map) {
+		System.out.println("----doPost---服务被调用----------");
+		return "nimei";
+	}
+
+}

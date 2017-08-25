@@ -1,0 +1,11 @@
+package com.lcd.api;
+
+import java.util.Map;
+
+public interface TestService {
+	public String testSayDubbo();
+
+	public String say(String name);
+	
+	public String doPost(Map<String, String> map);
+}

@@ -1,0 +1,5 @@
+package com.lcd.business.login;
+
+public class LoginServiceImpl {
+
+}

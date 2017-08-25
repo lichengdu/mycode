@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lcd.service.TestServiceImpl&apos; to &apos;GlobalServiceImpl&apos;&#x0D;&#x0A;- Original project: &apos;dubbo-service&apos;&#x0D;&#x0A;- Original element: &apos;com.lcd.service.TestServiceImpl&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lcd.service.GlobalServiceImpl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TestServiceImpl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.lcd.service{TestServiceImpl.java[TestServiceImpl" matchStrategy="1" name="GlobalServiceImpl" qualified="false" references="true" similarDeclarations="false" stamp="1503543313735" textual="false" version="1.0"/>
+</session>

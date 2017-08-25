@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans        
+    http://www.springframework.org/schema/beans/spring-beans.xsd        
+    http://code.alibabatech.com/schema/dubbo        
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 润泓		port=40888  appname=logisticsopenapi-logistics-membershipMS-app	group=mop_logistics_membershipMS	-->
+	<!-- 物流专线  	port=40007	appname=logisticsopenapi-logistics-specialline-app	group=mop_logistics_specialline	-->
+	<!-- 提供方应用信息，用于计算依赖关系-->
+    <dubbo:application name="logisticsopenapi-logistics-specialline-app"  />
+
+	<!-- 使用zookeeper注册中心暴露发现服务地址 -->
+	<dubbo:registry address="192.168.33.11:2181,192.168.33.11:2182,192.168.33.11:2183" protocol="zookeeper" />
+
+	<!-- <dubbo:monitor protocol="registry" /> -->
+
+	<!-- 润泓(核心云平台)	group=mop_logistics_membershipMS
+   		validationService	port=40005  
+   		configService       port=40888
+   		baseService       	port=40880
+   		logisticsService    port=40001
+   	-->
+	<!-- 物流专线  			group=mop_logistics_specialline	
+		validationService	port=40010	
+		configService       port=40007	
+		baseService       	port=40006
+		logisticsService    port=40009
+		financeService      port=40003
+		capitalService      port=40002
+		webapiService       port=40004
+	-->
+	<dubbo:reference id="configService" interface="com.masget.provider.webinterface.logisticsconfig" group="mop_logistics_specialline" timeout="40000" check="false" />
+	<dubbo:reference id="baseService" interface="com.masget.provider.webinterface.logisticsbase" group="mop_logistics_specialline"  timeout="40000" check="false" />
+	<dubbo:reference id="logisticsService" interface="com.masget.provider.webinterface.logistics" group="mop_logistics_specialline" timeout="40000" check="false" />
+	<dubbo:reference id="financeService" interface="com.masget.provider.webinterface.finance" group="mop_logistics_specialline"  timeout="40000" check="false" />
+	<dubbo:reference id="capitalService" interface="com.masget.provider.webinterface.capital" group="mop_logistics_specialline" timeout="40000" check="false" />
+	<dubbo:reference id="webapiService" interface="com.masget.provider.webinterface.webapi" group="mop_logistics_specialline" timeout="40000" check="false" />
+	
+</beans>

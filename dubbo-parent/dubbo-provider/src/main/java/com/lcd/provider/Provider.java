@@ -7,7 +7,7 @@ import com.lcd.util.log.ILogUtil;
 import com.lcd.util.util.GlobalContainer;
 public class Provider {
 	public static void main(String[] args) throws Exception {
-
+		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				new String[] { "applicationContext.xml" });
 		GlobalContainer.setApplicationContext(context);

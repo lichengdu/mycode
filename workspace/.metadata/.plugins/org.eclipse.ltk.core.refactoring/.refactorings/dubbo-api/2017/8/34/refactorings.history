@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;com.lcd.api.TestService.java&apos; to &apos;GlobalService.java&apos;&#x0D;&#x0A;- Original project: &apos;dubbo-api&apos;&#x0D;&#x0A;- Original element: &apos;com.lcd.api.TestService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lcd.api.GlobalService.java&apos;" description="Rename compilation unit &apos;TestService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.lcd.api{TestService.java" name="GlobalService.java" references="false" stamp="1503542986163" version="1.0"/>
-</session>

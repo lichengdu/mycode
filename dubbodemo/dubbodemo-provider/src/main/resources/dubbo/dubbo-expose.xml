@@ -1,0 +1,21 @@
+﻿<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	   http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 暴露出去的接口-->
+    <bean id="dubboDemoFacade" class="com.dubbo.demo.facade.impl.DubboDemoFacade"/>
+
+    <dubbo:service
+            ref="dubboDemoFacade"
+            interface="com.dubbo.demo.facade.IDubboDemoFacade"
+            version="1.0.0"
+            cluster="failfast"
+            executes="10"
+            timeout="500000"
+            registry="ufind_id">
+    </dubbo:service>
+</beans>
+

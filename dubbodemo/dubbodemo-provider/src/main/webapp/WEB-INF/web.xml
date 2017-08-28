@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+
+    <display-name>Flight Routes OMS</display-name>
+
+    <!--Core filter-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/oms/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Spring Listener -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:root.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--Character Filter-->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--<filter>
+        <filter-name>permission</filter-name>
+        <filter-class>com.flightroutes.flight.oms.web.filter.PermissionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>permission</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <!-- 在进行beta环境测试的时候需要将下边的代码注释掉-->
+    <!--<filter>-->
+    <!--<filter-name>permission</filter-name>-->
+    <!--<filter-class>com.flightroutes.flight.oms.web.filter.PermissionFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>permission</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <!--Other Setting-->
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+
+    <!--Welcome page-->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!--<error-page>-->
+    <!--<error-code>302</error-code>-->
+    <!--<location>/pages/errors/302.jsp</location>-->
+    <!--</error-page>-->
+    <!--<error-page>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/pages/errors/404.jsp</location>-->
+    <!--</error-page>-->
+    <!--<error-page>-->
+    <!--<error-code>405</error-code>-->
+    <!--<location>/pages/errors/405.jsp</location>-->
+    <!--</error-page>-->
+    <!--<error-page>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/pages/errors/500.jsp</location>-->
+    <!--</error-page>-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
+
+
+	

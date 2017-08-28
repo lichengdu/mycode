@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="${zkServiceAppName}" owner="liugen.xu" organization="MyUFind"/>
+
+    <dubbo:registry address="${zookeeper}" timeout="500000" group="${ufind.group}" id="ufind_id"/>
+
+    <!--<dubbo:protocol name="http" port="8889"/>-->
+    <!--<dubbo:protocol name="dubbo" port="8889"/>-->
+
+    <!--<dubbo:protocol name="hessian" port="8890"/>-->
+    <!--<dubbo:protocol name="webservice" port="8892"/>-->
+    <!--<dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
+
+    <import resource="dubbo-expose.xml"/>
+</beans>

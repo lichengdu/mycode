@@ -153,4 +153,5 @@
 
     </build>
 
+    <groupId>shiro-example-chapter16</groupId>
 </project>

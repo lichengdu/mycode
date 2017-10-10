@@ -4,6 +4,7 @@ import junit.framework.Assert;
 import org.apache.shiro.authz.ModularRealmAuthorizer;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.apache.shiro.authz.permission.WildcardPermission;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -13,6 +14,7 @@ import org.junit.Test;
  */
 public class AuthorizerTest extends BaseTest {
 
+	@Ignore
     @Test
     public void testIsPermitted() {
         login("classpath:shiro-authorizer.ini", "zhang", "123");
@@ -28,7 +30,7 @@ public class AuthorizerTest extends BaseTest {
 
         Assert.assertTrue(subject().isPermitted("menu:view"));//通过MyRolePermissionResolver解析得到的权限
     }
-
+	
     @Test
     public void testIsPermitted2() {
         login("classpath:shiro-jdbc-authorizer.ini", "zhang", "123");

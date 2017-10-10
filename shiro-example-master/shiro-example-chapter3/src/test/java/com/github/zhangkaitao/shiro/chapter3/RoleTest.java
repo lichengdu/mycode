@@ -2,6 +2,7 @@ package com.github.zhangkaitao.shiro.chapter3;
 
 import junit.framework.Assert;
 import org.apache.shiro.authz.UnauthorizedException;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class RoleTest extends BaseTest {
         Assert.assertEquals(true, result[1]);
         Assert.assertEquals(false, result[2]);
     }
-
+    @Ignore
     @Test(expected = UnauthorizedException.class)
     public void testCheckRole() {
         login("classpath:shiro-role.ini", "zhang", "123");

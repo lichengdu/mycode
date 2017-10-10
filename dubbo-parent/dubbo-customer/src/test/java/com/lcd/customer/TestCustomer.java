@@ -15,7 +15,7 @@ public class TestCustomer {
 				new String[] { "servlet-context.xml" });
 		context.start();
 
-		GlobalService globalService = (GlobalService) context.getBean("testService");
+		GlobalService globalService = (GlobalService) context.getBean("globalService");
 		/*String hello = testService.say("lichengdu");
 		String dubbo = testService.testSayDubbo();
 		System.out.println(hello);

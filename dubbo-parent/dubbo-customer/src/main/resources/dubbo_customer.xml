@@ -21,8 +21,8 @@
    	
    	<!-- <dubbo:registry address="N/A"  protocol="zookeeper"/> -->
    
-   <dubbo:reference interface="com.lcd.api.TestService" id="testService" group="testGroup" check="false" />
+   <!-- <dubbo:reference interface="com.lcd.api.GlobalService" id="globalService" group="testGroup" check="false" /> -->
    <!-- group必须和服务端相同 -->
-   <!-- <dubbo:reference id="testService" interface="com.lcd.api.TestService" group="testGroup" timeout="40000" check="false" url="dubbo://127.0.0.1:2000"/> -->
+   <dubbo:reference id="globalService" interface="com.lcd.api.GlobalService" group="testGroup" timeout="40000" check="false" url="dubbo://127.0.0.1:2000"/>
 
 </beans>
